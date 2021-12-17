@@ -7,9 +7,9 @@
 /************************* Adafruit.io Setup *********************************/
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883
-#define AIO_USERNAME  "Looomi"
-#define AIO_USERNAME2  "1945X1"
-#define AIO_KEY  "aio_MTuD66D3y71kz7zg1GqPyyQQmtcR"
+#define AIO_USERNAME  "Your User Name"
+#define AIO_USERNAME2  "Pair User Name"
+#define AIO_KEY  "Your Key"
 WiFiClient client;
 
 Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
@@ -72,9 +72,7 @@ void setup() {
   Serial.print("Account: ");
   Serial.println(AIO_USERNAME);
   Serial.println("START");
-  //WiFi.begin("ACCD", "tink1930");
-  WiFi.begin("Tenda_CFA0F8", "room4776");
-  //WiFi.begin("Bell Pasadena WiFi", "");
+  WiFi.begin("WifiName", "WifiPassword");
   while ((!(WiFi.status() == WL_CONNECTED))) {
     delay(300);
     Serial.print("..");
